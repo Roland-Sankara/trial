@@ -79,51 +79,7 @@ function Login_mobile(){
 
 //Library sliding navigation
 
-/*let button_nav= document.getElementById("btn-menu");
-let movie_panel_two= document.getElementById("movie-panel-2");
-let movie_panel_one= document.getElementById("movie-panel-1");
-let movie_panel_three= document.getElementById("movie-panel-3");
-let movie_panel_four= document.getElementById("movie-panel-4");
-let cart_page = document.getElementById("movie-cart");
 
-
-function Anime(){
-    button_nav.style.left="0px";
-    movie_panel_two.style="margin-top:0px;"
-    movie_panel_one.style="margin-top:0px;"
-    movie_panel_three.style="margin-top:0px;"
-    movie_panel_four.style="margin-top:0px;"
-}
-function Sci(){
-    button_nav.style.left="120px";
-    movie_panel_two.style="margin-top:0px;"
-    movie_panel_one.style=`margin-top:-${panel_height+20}px;`
-    movie_panel_three.style="margin-top:0px;"
-    movie_panel_four.style="margin-top:0px;"
-}
-function Action(){
-    button_nav.style.left="240px";
-    movie_panel_two.style="margin-top:0px;"
-    movie_panel_one.style=`margin-top:-${(panel_height+20)*2}px;`
-    movie_panel_three.style="margin-top:0px;"
-    movie_panel_four.style="margin-top:0px;"
-}
-function Serie(){
-    button_nav.style.left="360px";
-    movie_panel_two.style="margin-top:0px;"
-    movie_panel_one.style=`margin-top:-${(panel_height+20)*3}px;`
-    movie_panel_three.style="margin-top:0px;"
-    movie_panel_four.style="margin-top:0px;"
-}
-function change2(){
-    document.getElementById('movie-cart').style.display="block";
-    button_nav.style.left="0px";
-    movie_panel_two.style="margin-top:0px;"
-    movie_panel_one.style=`margin-top:-${(panel_height+20)*4}px;`
-    movie_panel_three.style="margin-top:0px;"
-    movie_panel_four.style="margin-top:0px;"
-    cart_page="margin-top:0px;"
-}*/
 let button_nav= document.getElementById("btn-menu");
 let movie_panel_two= document.getElementById("movie-panel-2");
 let movie_panel_one= document.getElementById("movie-panel-1");
@@ -135,43 +91,43 @@ let cart_page = document.getElementById("movie-cart");
 
 function Anime(){
     button_nav.style.left="0px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+50}px;`
     movie_panel_one.style="top:30px;"
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_three.style=`top:-${panel_height+50}px;`
+    movie_panel_four.style=`top:-${panel_height+50}px;`
+    cart_page.style=`top:-${panel_height+50}px;`
 }
 function Sci(){
     button_nav.style.left="120px";
     movie_panel_two.style="top:30px;"
-    movie_panel_one.style=`top:-${panel_height+40}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_one.style=`top:-${panel_height+50}px;`
+    movie_panel_three.style=`top:-${panel_height+50}px;`
+    movie_panel_four.style=`top:-${panel_height+50}px;`
+    cart_page.style=`top:-${panel_height+50}px;`
 }
 function Action(){
     button_nav.style.left="240px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`margin-top:-${(panel_height+40)}px;`
+    movie_panel_two.style=`top:-${panel_height+50}px;`
+    movie_panel_one.style=`margin-top:-${(panel_height+50)}px;`
     movie_panel_three.style="top:30px;"
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_four.style=`top:-${panel_height+50}px;`
+    cart_page.style=`top:-${panel_height+50}px;`
 }
 function Serie(){
     button_nav.style.left="360px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`margin-top:-${(panel_height+40)}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+50}px;`
+    movie_panel_one.style=`margin-top:-${(panel_height+50)}px;`
+    movie_panel_three.style=`top:-${panel_height+50}px;`
     movie_panel_four.style="top:30px;"
-    cart_page.style=`top:-${panel_height+40}px;`
+    cart_page.style=`top:-${panel_height+50}px;`
 }
 function change2(){
     document.getElementById('movie-cart').style.display="block";
     button_nav.style.left="0px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`top:-${(panel_height+40)}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+50}px;`
+    movie_panel_one.style=`top:-${(panel_height+50)}px;`
+    movie_panel_three.style=`top:-${panel_height+50}px;`
+    movie_panel_four.style=`top:-${panel_height+50}px;`
     cart_page.style="top:30px;"
 }
 
