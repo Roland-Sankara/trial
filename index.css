@@ -349,7 +349,11 @@ nav{
     top:30px;
 }
 #movie-panel-2,#movie-panel-3,#movie-panel-4{
+<<<<<<< HEAD
     top:-1000%;
+=======
+    top:-350%;
+>>>>>>> c9d031e263fc673c2e9cd5e03d1ef75881128773
 }
 
 
