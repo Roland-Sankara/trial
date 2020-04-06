@@ -34,14 +34,14 @@
                         <input id="user1" type="text" class="input-field" placeholder="Username" required>
                         <input id="pass1" type="password" class="input-field" placeholder="Enter Password" max-length="4" required>
                         <input type="checkbox" class="checkbox"><span>Remember Password</span>
-                        <button type="button" class="submit-btn" onclick="validateLogin(), user_name()">Log In</button>
+                        <button type="button" class="submit-btn" onclick="validateLogin(), user_name()">LogIn</button>
                     </form>
                     <form id="Signup" class="input-group">
                         <input id="user2" type="text" class="input-field" placeholder="Username" required>
                         <input id="email" type="email" class="input-field" placeholder="E-mail" required>
                         <input id="pass2" type="password" class="input-field" placeholder="Enter Password" max-length="4" required>
                         <input type="checkbox" class="checkbox"><span>I agree to the terms</span>
-                        <button type="button" class="submit-btn" onclick="validateSignup()">Log In</button>
+                        <button type="button" class="submit-btn" onclick="validateSignup(), user_name()">SignUp</button>
                     </form>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <header>
                 <h1 onclick="change1()"><i class="fab fa-youtube"></i> Vidiyo</h1>
                 <div id="search"><input  id="search-input" type="text" placeholder="Search"></div>
-                <div onclick="change1()" style="font-size:40px; cursor: pointer; color:white;"><i class="fas fa-user-plus"></i></div>
+                <div id="userplus" onclick="change1()" style="font-size:40px; cursor: pointer; color:white;"><i class="fas fa-user-plus"></i></div>
             </header>
             <nav>
                 <div class="catalogue-box">
@@ -68,7 +68,7 @@
                 </div>
                 
                 <div class="cart">
-                    <h2 onclick="change2()"><i class="fas fa-shopping-cart"></i> Movie cart <span id="cartitems"> </span></h2>
+                    <h2 onclick="change2()"><i class="fas fa-shopping-cart"> </i> Movie cart <i id="cartitems">  </i></h2>
                 </div>
             </nav>
             
@@ -104,7 +104,7 @@
                                         <a id="videoLink1" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     
                                     </div>
-                                    <div id="btn-1" class="click-box" onclick="cart('Angry Birds','btn-1')"><i class="fas fa-cart-plus"></i></div>  
+                                    <div id="btn-1" class="click-box" onclick="cart('Angry Birds','btn-1'), cartItems()"><i class="fas fa-cart-plus"></i></div>  
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink2',`https://www.youtube.com/embed/jWM0ct-OLsM`)">
                                         <a id="videoLink2" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-2" class="click-box" onclick="cart('Zootopia','btn-2')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-2" class="click-box" onclick="cart('Zootopia','btn-2'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +159,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink3',`https://www.youtube.com/embed/k397HRbTtWI`)">
                                         <a id="videoLink3" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-3" class="click-box" onclick="cart('Boss Baby','btn-3')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-3" class="click-box" onclick="cart('Boss Baby','btn-3'),cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink4',`https://www.youtube.com/embed/TcMBFSGVi1c`)">
                                         <a id="videoLink4" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-4" class="click-box" onclick="cart('End Game','btn-4')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-4" class="click-box" onclick="cart('End Game','btn-4'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -219,7 +219,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink5',`https://www.youtube.com/embed/AntcyqJ6brc`)">
                                         <a id="videoLink5" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-5" class="click-box" onclick="cart('The Last Knight','btn-5')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-5" class="click-box" onclick="cart('The Last Knight','btn-5'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink6',`https://www.youtube.com/embed/xjDjIWPwcPU`)">
                                         <a id="videoLink6" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-6" class="click-box" onclick="cart('Black Panther','btn-6')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-6" class="click-box" onclick="cart('Black Panther','btn-6'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -279,7 +279,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink7',`https://www.youtube.com/embed/uisBaTkQAEs`)">
                                         <a id="videoLink7" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-7" class="click-box" onclick="cart('Fast and Furoius 8','btn-7')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-7" class="click-box" onclick="cart('Fast and Furoius 8','btn-7'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +306,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink8',`https://www.youtube.com/embed/kl8F-8tR8to`)">
                                         <a id="videoLink8" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id='btn-8' class="click-box" onclick="cart('Kings Man','btn-8')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id='btn-8' class="click-box" onclick="cart('Kings Man','btn-8'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -333,7 +333,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink9',`https://www.youtube.com/embed/Nt9L1jCKGnE`)">
                                         <a id="videoLink9" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-9" class="click-box" onclick="cart('Spider-Man-far-from-home','btn-9')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-9" class="click-box" onclick="cart('Spider-Man-far-from-home','btn-9'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -366,7 +366,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink10',`https://www.youtube.com/embed/U402uMSRq1g`)">
                                         <a id="videoLink10" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-10" class="click-box" onclick="cart('Scorpion','btn-10')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-10" class="click-box" onclick="cart('Scorpion','btn-10'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -393,7 +393,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink11',`https://www.youtube.com/embed/4jwROC6JfcI`)">
                                         <a id="videoLink11" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-11" class="click-box" onclick="cart('Flash','btn-11')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-11" class="click-box" onclick="cart('Flash','btn-11'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -420,7 +420,7 @@
                                     <div class="click-box" onclick="vidlink('#videoLink12',`https://www.youtube.com/embed/rlR4PJn8b8I`)">
                                         <a id="videoLink12" href="#videoPopUp"><i class="far fa-play-circle"></i></a>
                                     </div>
-                                    <div id="btn-12" class="click-box" onclick="cart('Game-of-thrones','btn-12')"><i class="fas fa-cart-plus"></i></div>
+                                    <div id="btn-12" class="click-box" onclick="cart('Game-of-thrones','btn-12'), cartItems()"><i class="fas fa-cart-plus"></i></div>
                                 </div>
                             </div>
                         </div>

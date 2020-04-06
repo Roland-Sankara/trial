@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded',()=>{
     setInterval(() => {
         document.getElementById('intro-page').style.display="none"
-    }, 1000);
+    }, 19000);
 })
 
 
-//console.log(content);
+
 
 //form validations
 function validateLogin(){
@@ -18,7 +18,7 @@ function validateLogin(){
     }else if(password.length<6){
         document.getElementById('pass1').setAttribute('placeholder', 'Enter atleast six characters')
         document.getElementById('pass1').style="border-bottom: 2px solid red;"
-        //alert('Pass word should be atleast 6 characters');
+        alert('PassWord should be Atleast 6 Characters');
     }else{
         change();
     }
@@ -36,9 +36,9 @@ function validateSignup(){
         document.getElementById('email').setAttribute('placeholder', 'Enter Valid Password')
         document.getElementById('email').style="border-bottom: 2px solid red;"
     }else if(password2.length<6){
+        alert('Password Should be Atleast 6 Characters');
         document.getElementById('pass2').setAttribute('placeholder', 'Enter atleast Six Characters')
         document.getElementById('pass2').style="border-bottom: 2px solid red;"
-        //alert('Pass word should be atleast 6 characters');
     }else{
         change();
     }
@@ -47,7 +47,7 @@ function validateSignup(){
 
 //movie panel height
 let panel_height = document.getElementById('movie-panel-1').offsetHeight;
-document.getElementById('movie-panels').style=`height:${panel_height+20}px;`
+document.getElementById('movie-panels').style=`height:${panel_height+40}px;`
 
 
 //sliding Between LogIn and SignUp pages
@@ -135,52 +135,50 @@ let cart_page = document.getElementById("movie-cart");
 
 function Anime(){
     button_nav.style.left="0px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+1000}px;`
     movie_panel_one.style="top:30px;"
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_three.style=`top:-${panel_height+1000}px;`
+    movie_panel_four.style=`top:-${panel_height+1000}px;`
+    cart_page.style=`top:-${panel_height+1000}px;`
 }
 function Sci(){
     button_nav.style.left="120px";
     movie_panel_two.style="top:30px;"
-    movie_panel_one.style=`top:-${panel_height+40}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_one.style=`top:-${panel_height+1000}px;`
+    movie_panel_three.style=`top:-${panel_height+1000}px;`
+    movie_panel_four.style=`top:-${panel_height+1000}px;`
+    cart_page.style=`top:-${panel_height+1000}px;`
 }
 function Action(){
     button_nav.style.left="240px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`margin-top:-${(panel_height+40)}px;`
+    movie_panel_two.style=`top:-${panel_height+1000}px;`
+    movie_panel_one.style=`margin-top:-${(panel_height+1000)}px;`
     movie_panel_three.style="top:30px;"
-    movie_panel_four.style=`top:-${panel_height+40}px;`
-    cart_page.style=`top:-${panel_height+40}px;`
+    movie_panel_four.style=`top:-${panel_height+1000}px;`
+    cart_page.style=`top:-${panel_height+1000}px;`
 }
 function Serie(){
     button_nav.style.left="360px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`margin-top:-${(panel_height+40)}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+1000}px;`
+    movie_panel_one.style=`margin-top:-${(panel_height+1000)}px;`
+    movie_panel_three.style=`top:-${panel_height+1000}px;`
     movie_panel_four.style="top:30px;"
-    cart_page.style=`top:-${panel_height+40}px;`
+    cart_page.style=`top:-${panel_height+1000}px;`
 }
 function change2(){
     document.getElementById('movie-cart').style.display="block";
     button_nav.style.left="0px";
-    movie_panel_two.style=`top:-${panel_height+40}px;`
-    movie_panel_one.style=`top:-${(panel_height+40)}px;`
-    movie_panel_three.style=`top:-${panel_height+40}px;`
-    movie_panel_four.style=`top:-${panel_height+40}px;`
+    movie_panel_two.style=`top:-${panel_height+1000}px;`
+    movie_panel_one.style=`top:-${(panel_height+1000)}px;`
+    movie_panel_three.style=`top:-${panel_height+1000}px;`
+    movie_panel_four.style=`top:-${panel_height+1000}px;`
     cart_page.style="top:30px;"
 }
 
 
 // Adding and Removing to and from A movie cart
-let cartCount = document.getElementById('cartitems').innerText; 
-let count = Number(cartCount);
+
 function cart(Movie_name,btn_id){
-    
     //creating a template for the each element added to cart
      let parent = document.createElement("div");
      let text = document.createElement('h2');
@@ -206,22 +204,23 @@ function cart(Movie_name,btn_id){
 
      document.getElementById(btn_id).style="pointer-events:none;";
      document.getElementById(btn_id).innerHTML = '<i class="far fa-check-circle"></i>';
-     count + 1;
 
      
     removeMovie.addEventListener('click',()=>{
         document.getElementById(btn_id).style="pointer-events:auto;"
         document.getElementById(btn_id).innerHTML = '<i class="fas fa-cart-plus"></i>';
         parent.style="display:none;"
-        count - 1;
-    }); 
-    document.getElementById('cartitems').innerText = `${cartCount}`; 
+        let countreduce = Number(document.getElementById('cartitems').innerText);
+        document.getElementById('cartitems').innerText = `${countreduce - 1}`;
+
+    });  
    
 }
-function cartItems(id){
-    document.getElementById(id).addEventListener('click',()=>{
-        count + 1
-    })
+function cartItems(){
+    let counter = document.getElementById('cartitems').innerText;
+    let count = Number(counter) + 1;
+    document.getElementById('cartitems').innerText = count;
+    document.getElementById('cartitems').style="color:red; font-size:25px;"
 }
 
 
